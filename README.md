@@ -77,8 +77,8 @@ Window :
     Ctrl+K S                                            Save All
     Ctrl+Tab                                            Open next
     Ctrl+Shift+Tab                                      Open previous
-    Ctrl + ↓    Scroll window Down
-    Ctrl + ↑    Scroll window Up
+    Ctrl + ↓                                            Scroll window Down
+    Ctrl + ↑                                            Scroll window Up
 
 
 File management
@@ -172,4 +172,46 @@ Custom Commands
     Alt + `                                                            Open Wrap Abbreviation
 
 
+```
+
+### Custom Snippets Example:
+
+```json
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "snippets-1": {
+    "prefix": "cl",
+    "body": ["console.log(${1:'custom snippet'});", "$2"],
+    "description": "Show console.log in a console"
+  },
+  "snippets-2": {
+    "scope": "javascript,typescript",
+    "prefix": "newClase",
+    "body": [
+      "export class ${1:CustomClassName}{",
+      "",
+      "   constructor(){",
+      "      $2",
+      "   }",
+      "}"
+    ],
+    "description": "Create a custom class"
+  }
+}
 ```
