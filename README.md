@@ -23,8 +23,8 @@ General
     Ctrl+K Ctrl+S                                       Keyboard Shortcuts
     Ctrl+Shift+E                                        Move to explorer
     Ctrl+Shift+F                                        Move t search file option in VsCode
-    Ctrl+Shift+G G                                      Move t search file option in VsCode
-
+    Ctrl+Shift+G G                                      Move to GitLens tab  
+    Ctrl*Shift+D                                        Move to the debugger tab
 
 Multi-cursor and selection:
 
@@ -186,13 +186,13 @@ Custom Commands
   // Placeholders with the same ids are connected.
   // Example:
   // "Print to console": {
-  // 	"scope": "javascript,typescript",
-  // 	"prefix": "log",
-  // 	"body": [
-  // 		"console.log('$1');",
-  // 		"$2"
-  // 	],
-  // 	"description": "Log output to console"
+  // "scope": "javascript,typescript",
+  // "prefix": "log",
+  // "body": [
+  // "console.log('$1');",
+  // "$2"
+  // ],
+  // "description": "Log output to console"
   // }
 
   "snippets-1": {
@@ -212,6 +212,71 @@ Custom Commands
       "}"
     ],
     "description": "Create a custom class"
-  }
+  },
+    "new-todo":{
+        "scope": "javascript,typescript",
+        "prefix": "todo",
+        "body": [
+            "//TODO:$1"
+        ]
+    },
+    "console-log-with-comments":{
+        "scope": "javascript,typescript",
+        "prefix": "cl",
+        "body":[
+            "console.log(${1:var},'${2:comment}')"
+        ]
+    }
 }
 ```
+
+```
+Some snippets for JavaScript ES6
+
+dob                                      create the syntax for desctructuring an object
+dar                                      create the syntax for desctructurin an array
+nfn                                      create a basic function with basic name
+
+Snippets for React 
+
+rcc                     class component skeleton
+rrc                     class component skeleton with react-redux connect
+rrdc                    class component skeleton with react-redux connect and dispatch
+rccp                    class component skeleton with prop types after the class
+rcjc                    class component skeleton without import and default export lines
+rcfc                    class component skeleton that contains all the lifecycle methods
+rscm                    memoize stateless component skeleton
+rwwd                    class component without import statements
+rpc                     class pure component skeleton with prop types after the class
+rsc                     stateless component skeleton
+rscp                    stateless component with prop types skeleton
+rscpm                   memoize stateless component with prop types skeleton
+rsf                     stateless named function skeleton
+rsfp                    stateless named function with prop types skeleton
+rsi                     stateless component with prop types and implicit return
+fcc                     class component with flow types skeleton
+fsf                     stateless named function skeleton with flow types skeleton
+fsc                     stateless component with flow types skeleton
+rpt                     empty propTypes declaration
+rdp                     empty defaultProps declaration
+con                     class default constructor with props
+conc                    class default constructor with props and context
+est                     empty state object
+cwm                     componentWillMount method
+cdm                     componentDidMount method
+cwr                     componentWillReceiveProps method
+scu                     shouldComponentUpdate method
+cwup                    componentWillUpdate method
+cdup                    componentDidUpdate method
+cwun                    componentWillUnmount method
+gsbu                    getSnapshotBeforeUpdate method
+gdsfp                   static getDerivedStateFromProps method
+cdc                     componentDidCatch method
+ren                     render method
+sst                     this.setState with object as parameter
+ssf                     this.setState with function as parameter
+props                   this.props
+state                   this.state
+bnd                     binds the this of method inside the constructor
+disp                    MapDispatchToProps redux function
+```             
